@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="header">
+      <h1>Rock Paper Scissors</h1>
+      <p class="subtitle">First to reach higher scores or keep your streak alive!</p>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score-card">
+        <span class="score-label">Player</span>
+        <span id="player-score" class="score-value">0</span>
+      </div>
+      <div class="score-card">
+        <span class="score-label">Ties</span>
+        <span id="tie-score" class="score-value">0</span>
+      </div>
+      <div class="score-card">
+        <span class="score-label">Computer</span>
+        <span id="computer-score" class="score-value">0</span>
+      </div>
+      <div class="score-card highlight">
+        <span class="score-label">Streak</span>
+        <span id="streak-score" class="score-value">0</span>
+      </div>
+    </section>
+
+    <section class="arena">
+      <div class="fighter-box" id="player-box">
+        <span class="fighter-label">You</span>
+        <div class="fighter-icon" id="player-display">✊</div>
+        <span class="fighter-choice" id="player-choice-name">Ready</span>
+      </div>
+
+      <div class="vs-divider">VS</div>
+
+      <div class="fighter-box" id="computer-box">
+        <span class="fighter-label">Computer</span>
+        <div class="fighter-icon" id="computer-display">✊</div>
+        <span class="fighter-choice" id="computer-choice-name">Waiting</span>
+      </div>
+    </section>
+
+    <div class="status-banner" id="status-banner">Choose your weapon to start!</div>
+
+    <section class="controls">
+      <button class="choice-btn" data-choice="rock" aria-label="Rock">
+        <span class="btn-icon">✊</span>
+        <span class="btn-text">Rock</span>
+        <kbd>R</kbd>
+      </button>
+
+      <button class="choice-btn" data-choice="paper" aria-label="Paper">
+        <span class="btn-icon">✋</span>
+        <span class="btn-text">Paper</span>
+        <kbd>P</kbd>
+      </button>
+
+      <button class="choice-btn" data-choice="scissors" aria-label="Scissors">
+        <span class="btn-icon">✌️</span>
+        <span class="btn-text">Scissors</span>
+        <kbd>S</kbd>
+      </button>
+    </section>
+
+    <footer class="footer-actions">
+      <button id="reset-btn" class="reset-btn">Reset Match</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
